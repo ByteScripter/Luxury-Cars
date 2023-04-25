@@ -385,5 +385,34 @@ body {
 
 .services__title {
   padding-top: 30px;
-  padding-bottom: 66px;
+  padding-bottom: 40px;
 }
+
+.services-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.services-card__img {
+  margin-bottom: 24px;
+}
+
+.services-card__title {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.75em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.services-card__text {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.75em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*====================== Destination ======================*/

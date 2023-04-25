@@ -212,6 +212,7 @@ body {
 	padding-bottom: 40px;
 }
 
+//grid
 .rent-wrap {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -294,5 +295,27 @@ body {
 
 .services__title {
 	padding-top: 30px;
-	padding-bottom: 66px;
+	padding-bottom: 40px;
 }
+
+//grid
+.services-wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.services-card__img {
+	margin-bottom: 24px;
+}
+
+.services-card__title {
+	@include font-main(1.5em, 700, $font-main-color);
+	margin-bottom: 16px;
+}
+
+.services-card__text {
+	@include font-main(1em, 300, $font-main-color--opacity);
+}
+
+/*====================== Destination ======================*/
