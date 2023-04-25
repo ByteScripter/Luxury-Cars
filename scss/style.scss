@@ -1,0 +1,298 @@
+@import "../scss/null/nullstyle.scss";
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+//import variables
+@import "../scss/variables.scss";
+
+//import templates
+@import "../scss/templates.scss";
+
+//import mixins
+@import "../scss/mixins.scss";
+
+html {
+	font-family: "Be Vietnam Pro", sans-serif;
+	font-size: 16px;
+}
+
+body {
+	@include font-main(1rem, 300, $font-main-color);
+
+	background-color: $page-backround-color;
+}
+
+/*====================== header ======================*/
+//main-central-container
+.container {
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	padding: 40px 0 107px;
+}
+
+.header-wrapper {
+	//size 16px
+	@include font-main(1rem, 600, $font-main-color);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-logo {
+	& h1 {
+		display: none;
+	}
+}
+
+.header-logo__img {
+	max-width: 48px;
+	max-height: 48px;
+}
+
+.nav-main {
+	margin-left: auto;
+}
+
+.nav-main__list {
+	display: flex;
+	margin-right: 72px;
+
+	gap: 48px;
+	-moz-column-gap: 48px;
+}
+
+.nav-main__link {
+	&:hover {
+		color: $hover-text-color;
+		transition: 0.3s;
+	}
+}
+
+//button primary________________________
+.btn-primary {
+	@include font-main(1em, 600, $font-main-color);
+	@extend %button-style;
+}
+
+//button header________________________
+.header-btn {
+	max-width: 184px;
+}
+
+//button secondary________________________
+.btn-secondary {
+	@include font-main(1em, 600, $selected-text-color);
+	@extend %button-style;
+	line-height: 1.6em;
+
+	border: 1px solid $selected-text-color;
+	background: $page-backround-color;
+
+	&:hover {
+		color: $font-main-color;
+
+		transition: 0.3s;
+		border: 1px solid $font-main-color;
+		background-color: $button-backround-color;
+	}
+}
+
+/*====================== Banner ======================*/
+
+.banner-section {
+	position: relative;
+	padding-bottom: 60px;
+
+	overflow: hidden;
+}
+
+.banner {
+	max-width: 475px;
+}
+
+.banner__title {
+	pointer-events: none;
+}
+
+//title of primary
+.main-title {
+	//font-size 52px
+	@include font-main(3.25em, bold, $font-main-color);
+	line-height: 1.23em; //64px
+	letter-spacing: 0.6%;
+}
+
+.banner__text {
+	//font-size 52px, color-opacity ( 0.8 )
+	@include font-main(1.06em, 300, $font-main-color--opacity);
+	margin: 32px 0 48px;
+}
+
+//button________________________
+.banner-button-wrapp {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	gap: 35px;
+}
+
+//banner-advantage________________________
+.banner-advantage {
+	pointer-events: none;
+}
+
+.banner-advantage__text {
+	//font-size 40px
+	@include font-main(2.5em, 700, $font-main-color);
+	line-height: 1.3em; //52px
+	vertical-align: sub;
+
+	//padding between elements 500+ end text
+	&:first-child {
+		margin-right: 16px;
+	}
+}
+
+.banner-advantage__text--strong {
+	//font-size 16px
+	@include font-main(1em, 600, $font-main-color);
+
+	//padding between elements #1 end next item
+	&:first-child {
+		margin-right: 40px;
+	}
+}
+
+//banner-image________________________
+.banner-image-box {
+	width: 60%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+
+		background: url("../image/banner-car-background.png") no-repeat;
+		background-position: right 0 top 55px;
+	}
+
+	&::before {
+		content: "";
+		width: 700px;
+		height: 450px;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		background-color: $car-background-color;
+	}
+}
+
+/*====================== Rent-car ======================*/
+.rent-car {
+	margin-top: 60px;
+	padding-top: 60px;
+}
+
+.rent-car__title {
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.rent-wrap {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
+}
+
+.rent {
+	max-width: 584px;
+	height: 524px;
+
+	position: relative;
+
+	background: url("../image/cars/Supercars-1.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&:nth-child(2) {
+		background: url("../image/cars/Supercars-2.png");
+	}
+
+	&:nth-child(3) {
+		background: url("../image/cars/suv-3.png");
+	}
+
+	&:nth-child(4) {
+		background: url("../image/cars/supersuv-4.png");
+	}
+}
+
+.car-name {
+	@include font-main(2.5rem, 600, $font-main-color);
+
+	position: absolute;
+	top: 48px;
+	left: 48px;
+}
+
+//rent-link________________________
+.rent__link {
+	@include font-main(1.5rem, 600, $font-main-color);
+
+	padding-right: 30px;
+	position: absolute;
+	right: 60px;
+	bottom: 48px;
+
+	//background: tomato;
+
+	&::after {
+		content: "";
+		width: 16px;
+		height: 16px;
+
+		position: absolute;
+
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+
+		rotate: 45deg;
+		border-top: 2px solid $button-backround-color;
+		border-right: 2px solid $button-backround-color;
+	}
+}
+
+//animation hover
+.rent__link:hover::after {
+	//animation________________________
+	@include animation-element(flicker, 0.7s, ease-in-out, infinite, reverse);
+
+	//keyframes, contains parameters: name, arguments, values________________________
+	@include animation-keyframes(flicker, right, 10px, -23px);
+}
+
+/*====================== Services ======================*/
+
+.services {
+	margin-top: 30px;
+}
+
+.services__title {
+	padding-top: 30px;
+	padding-bottom: 66px;
+}

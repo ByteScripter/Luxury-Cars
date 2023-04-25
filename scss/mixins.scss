@@ -1,0 +1,31 @@
+//_______________________ font _______________________
+@mixin font-main($font-size, $font-weight, $color) {
+	font-family: "Be Vietnam Pro", sans-serif;
+
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: 1.75em; //28px
+
+	color: $color;
+}
+
+//_______________________ animation _______________________
+@mixin animation-element($name, $duration, $function, $iteration, $direction) {
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-timing-function: $function;
+	animation-iteration-count: $iteration;
+	animation-direction: $direction;
+}
+
+// keyframes
+@mixin animation-keyframes($neme, $property, $start, $end) {
+	@keyframes #{$neme} {
+		0% {
+			#{$property}: $start;
+		}
+		100% {
+			#{$property}: $end;
+		}
+	}
+}

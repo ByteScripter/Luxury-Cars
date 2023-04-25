@@ -1,0 +1,11 @@
+//button________________________
+%button-style {
+	padding: $padding-button;
+
+	background-color: #ee8313;
+
+	&:hover {
+		background-color: #ef5e10;
+		transition: 0.2s;
+	}
+}
