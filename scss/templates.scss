@@ -1,4 +1,5 @@
-//button________________________
+//_______________________ Button _______________________
+
 %button-style {
 	padding: $padding-button;
 
@@ -8,4 +9,14 @@
 		background-color: #ef5e10;
 		transition: 0.2s;
 	}
+}
+
+//_______________________ Indent _______________________
+
+%margin-title {
+	margin: 60px 0 40px 0;
+}
+
+%margin-sub-title {
+	margin: 24px 0 16px 0;
 }

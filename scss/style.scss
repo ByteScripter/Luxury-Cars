@@ -252,14 +252,13 @@ body {
 
 //rent-link________________________
 .rent__link {
+	//font-size 24px
 	@include font-main(1.5rem, 600, $font-main-color);
 
 	padding-right: 30px;
 	position: absolute;
 	right: 60px;
 	bottom: 48px;
-
-	//background: tomato;
 
 	&::after {
 		content: "";
@@ -294,8 +293,8 @@ body {
 }
 
 .services__title {
-	padding-top: 30px;
-	padding-bottom: 40px;
+	margin-top: 30px;
+	margin-bottom: 40px;
 }
 
 //grid
@@ -306,16 +305,87 @@ body {
 }
 
 .services-card__img {
-	margin-bottom: 24px;
+	max-width: 384px;
 }
 
 .services-card__title {
+	//font-size 24px
 	@include font-main(1.5em, 700, $font-main-color);
-	margin-bottom: 16px;
+	@extend %margin-sub-title;
 }
 
 .services-card__text {
+	//font-size 16px
 	@include font-main(1em, 300, $font-main-color--opacity);
+
+	margin-bottom: 30px;
 }
 
 /*====================== Destination ======================*/
+.destination {
+	margin-top: 90px;
+}
+
+.destination-title {
+	text-align: center;
+
+	max-width: 590px;
+	margin: 60px auto 40px;
+}
+
+.destination-wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.destination-card {
+	background: $cards-background-color;
+}
+
+.destination__img {
+	max-width: 384px;
+}
+
+.destination-card__item {
+	padding: 24px;
+
+	//link
+	.destination-card__link {
+		@include font-main(1em, 300, $selected-text-color);
+
+		&:hover {
+			color: $hover-text-color;
+			transition: 0.3s;
+		}
+	}
+}
+
+.destination-card__title {
+	//font-size 24px
+	@include font-main(1.5em, 700, $font-main-color);
+	@extend %margin-sub-title;
+}
+
+.destination-card__text {
+	//font-size 16px
+	@include font-main(1em, 300, $font-main-color--opacity);
+	@extend %margin-sub-title;
+	//reset margin top
+	margin-top: 0;
+}
+
+.destination-card__price {
+	//font-size 16px
+	@include font-main(1em, 600, $font-main-color);
+
+	display: block;
+	position: relative;
+
+	margin-bottom: 17px;
+	padding-left: 42px;
+
+	&::before {
+		content: "";
+	}
+}
